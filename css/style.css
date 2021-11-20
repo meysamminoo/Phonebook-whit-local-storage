@@ -1,0 +1,114 @@
+/* fonts => start */
+@font-face {
+  font-family: "mikhak";
+  src: url(../fonts/Mikhak-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "mikhak";
+  src: url(../fonts/Mikhak-Medium.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+/* fonts => end */
+/* Normalize style => start */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "mikhak";
+}
+html {
+  /* 62.5% = 10px = 1rem */
+  font-size: 62.5%;
+  direction: rtl;
+}
+body {
+  min-width: 37.5rem;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ol,
+ul {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+input,
+button,
+select {
+  outline: none;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Normalize style => end */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input,
+.btn-phonebook {
+  padding: 1rem;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+.btn-phonebook {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: blue;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+.btn-phonebook:hover {
+  background-color: orange;
+  color: #333;
+}
+.select-number {
+  margin: 1rem;
+  position: relative;
+}
+.select-number::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  height: 2.4rem;
+  border-radius: 5px 0 0 5px;
+  pointer-events: none;
+}
+.select-type {
+  width: 15rem;
+  font-size: 1.5rem;
+}

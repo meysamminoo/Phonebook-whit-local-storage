@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonebook</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>دفترچه تلفن</h1>
+    </header>
+    <form>
+      <input
+        type="text"
+        class="input title-phonebook"
+        placeholder="نام و نام خانوادگی"
+      />
+      <input
+        type="number"
+        class="input number-phonebook"
+        placeholder="شماره تلفن"
+      />
+      <div class="select-number">
+        <select class="input select-type">
+          <option value="0">شماره ثابت</option>
+          <option value="1">شماره همراه</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-phonebook">
+        <i class="fas fa-plus"></i>
+      </button>
+    </form>
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
