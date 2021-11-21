@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 ol,
@@ -63,6 +63,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 /* Normalize style => end */
+header h1 {
+  font-size: 3rem;
+  margin: 3rem 0;
+}
 form {
   display: flex;
   justify-content: center;
@@ -123,7 +127,7 @@ form {
 .list-phones {
   min-width: 40rem;
 }
-/* contacts */
+/* contacts box => start*/
 .contacts {
   display: flex;
   flex-direction: column;
@@ -133,10 +137,17 @@ form {
   border: 1px solid #777;
   margin: 1rem 0.5rem;
   font-size: 1.5rem;
+  border-radius: 3px;
 }
+/* contacts box => end*/
+/* contact => start*/
 .contact-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0 0 0 3rem;
 }
+.contact-list span {
+  margin: 0 1rem;
+}
+/* contact => end*/
