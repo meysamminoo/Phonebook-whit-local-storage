@@ -17,27 +17,33 @@
     <header>
       <h1>دفترچه تلفن</h1>
     </header>
-    <form>
-      <input
-        type="text"
-        class="input title-phonebook"
-        placeholder="نام و نام خانوادگی"
-      />
-      <input
-        type="number"
-        class="input number-phonebook"
-        placeholder="شماره تلفن"
-      />
-      <div class="select-number">
-        <select class="input select-type">
-          <option value="0">شماره ثابت</option>
-          <option value="1">شماره همراه</option>
-        </select>
-      </div>
-      <button type="submit" class="btn-phonebook">
-        <i class="fas fa-plus"></i>
-      </button>
-    </form>
+    <main class="container">
+      <form>
+        <input
+          type="text"
+          class="input title-phone"
+          placeholder="نام و نام خانوادگی"
+        />
+        <input
+          type="number"
+          class="input number-phone"
+          placeholder="شماره تلفن"
+        />
+        <div class="box-type-phone">
+          <select class="input select-type">
+            <option value="0">شماره ثابت</option>
+            <option value="1">شماره همراه</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-phone">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
+      <section class="list-phone-number">
+        <ul class="list-phones"></ul>
+      </section>
+    </main>
+
     <script src="javascript/index.js"></script>
   </body>
 </html>

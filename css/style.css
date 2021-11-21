@@ -68,14 +68,14 @@ form {
   align-items: center;
 }
 .input,
-.btn-phonebook {
+.btn-phone {
   padding: 1rem;
   font-size: 2rem;
   margin-left: 0.5rem;
   border: 1px solid #777;
   border-radius: 5px;
 }
-.btn-phonebook {
+.btn-phone {
   width: 5.5rem;
   height: 5.5rem;
   background-color: blue;
@@ -87,15 +87,15 @@ form {
   border: 1px solid transparent;
   transition: all 0.5s ease;
 }
-.btn-phonebook:hover {
+.btn-phone:hover {
   background-color: orange;
   color: #333;
 }
-.select-number {
+.box-type-phone {
   margin: 1rem;
   position: relative;
 }
-.select-number::after {
+.box-type-phone::after {
   content: "\25BC";
   position: absolute;
   top: 0;
@@ -111,4 +111,14 @@ form {
 .select-type {
   width: 15rem;
   font-size: 1.5rem;
+}
+
+.list-phone-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.list-phones {
+  min-width: 30%;
 }
