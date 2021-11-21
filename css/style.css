@@ -39,6 +39,7 @@ ol,
 ul {
   border: none;
   outline: none;
+  list-style: none;
 }
 a {
   text-decoration: none;
@@ -120,5 +121,22 @@ form {
   flex-flow: column;
 }
 .list-phones {
-  min-width: 30%;
+  min-width: 40rem;
+}
+/* contacts */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  color: #000;
+  padding: 1rem;
+  border: 1px solid #777;
+  margin: 1rem 0.5rem;
+  font-size: 1.5rem;
+}
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 0 0 3rem;
 }
