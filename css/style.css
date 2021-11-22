@@ -63,9 +63,18 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 /* Normalize style => end */
-header h1 {
+.header {
+  width: 100%;
+  background-color: blue;
+  text-align: center;
+}
+.header h1 {
   font-size: 3rem;
   margin: 3rem 0;
+  color: #eee;
+}
+.container {
+  margin: 2.5rem;
 }
 form {
   display: flex;
@@ -126,11 +135,14 @@ form {
 }
 .list-phones {
   min-width: 40rem;
+  opacity: 1;
 }
 /* contacts box => start*/
 .contacts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: transparent;
   color: #000;
   padding: 1rem;
@@ -149,5 +161,18 @@ form {
 }
 .contact-list span {
   margin: 0 1rem;
+}
+.trash-button {
+  background-color: blue;
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.effect-delete {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(-100%);
 }
 /* contact => end*/

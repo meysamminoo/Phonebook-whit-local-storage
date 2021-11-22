@@ -7,6 +7,7 @@ const selectType = document.querySelector('.select-type');
 
 //Event listener
 btnPhone.addEventListener('click', addItem);
+phoneList.addEventListener('click', deleteItem);
 
 
 //Function
@@ -28,5 +29,27 @@ function addItem(event){
   contact.appendChild(numberContact);
   contact.appendChild(typeContact);
   divPhone.appendChild(contact);
+
+  // todo: add trash buttton
+  const trashButton = document.createElement('button');
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add('trash-button');
+  divPhone.appendChild(trashButton);
+
+  //todo: add div to ul
   phoneList.appendChild(divPhone);
+
+  titlePhone.value = '';
+  numberPhone.value = '';
+}
+
+function deleteItem(event){
+  const item = event.target;
+  if (item.classList[0] === 'trash-button'){
+    const parentItem = item.parentElement;
+    parentItem.classList.add('effect-delete');
+    setTimeout(()=>{
+      parentItem.remove();
+    },1000);
+  }
 }
