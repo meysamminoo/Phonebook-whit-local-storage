@@ -26,15 +26,6 @@ html {
   font-size: 62.5%;
   direction: rtl;
 }
-body {
-  min-width: 37.5rem;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
 ol,
 ul {
   border: none;
@@ -63,6 +54,17 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 /* Normalize style => end */
+/* main contetnt => start */
+body {
+  min-width: 37.5rem;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* header => start */
 .header {
   width: 100%;
   background-color: blue;
@@ -73,23 +75,25 @@ input[type="number"] {
   margin: 3rem 0;
   color: #eee;
 }
-.container {
-  margin: 2.5rem;
+/* header => end */
+
+.main {
+  margin: 2.5rem 0;
 }
-form {
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .input,
-.btn-phone {
+.btn-phonenumber {
   padding: 1rem;
   font-size: 2rem;
   margin-left: 0.5rem;
   border: 1px solid #777;
   border-radius: 5px;
 }
-.btn-phone {
+.btn-phonenumber {
   width: 5.5rem;
   height: 5.5rem;
   background-color: blue;
@@ -101,15 +105,15 @@ form {
   border: 1px solid transparent;
   transition: all 0.5s ease;
 }
-.btn-phone:hover {
+.btn-phonenumber:hover {
   background-color: orange;
   color: #333;
 }
-.box-type-phone {
+.box-type-phonenumber {
   margin: 1rem;
   position: relative;
 }
-.box-type-phone::after {
+.box-type-phonenumber::after {
   content: "\25BC";
   position: absolute;
   top: 0;
@@ -122,18 +126,18 @@ form {
   border-radius: 5px 0 0 5px;
   pointer-events: none;
 }
-.select-type {
+.select-type-phonenumber {
   width: 15rem;
   font-size: 1.5rem;
 }
 
-.list-phone-number {
+.list-phonenumber {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
 }
-.list-phones {
+.list-contacts {
   min-width: 40rem;
   opacity: 1;
 }
@@ -145,7 +149,6 @@ form {
   align-items: center;
   background-color: transparent;
   color: #000;
-  padding: 1rem;
   border: 1px solid #777;
   margin: 1rem 0.5rem;
   font-size: 1.5rem;
@@ -165,14 +168,17 @@ form {
 .trash-button {
   background-color: blue;
   padding: 1rem 1.5rem;
-  border-radius: 3px;
+  border-radius: 3px 0 0 3px;
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
+  border: 1px solid transparent;
+  margin: 1px;
 }
 .effect-delete {
   opacity: 0;
   transition: all 1s ease;
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 /* contact => end*/
+/* main contetnt => end */

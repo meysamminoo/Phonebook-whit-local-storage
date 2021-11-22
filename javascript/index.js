@@ -1,46 +1,45 @@
-//Selectors
-const titlePhone = document.querySelector('.title-phone');
-const numberPhone = document.querySelector('.number-phone');
-const btnPhone = document.querySelector('.btn-phone');
-const phoneList = document.querySelector('.list-phones');
-const selectType = document.querySelector('.select-type');
+//*Selectors
+const titleContact = document.querySelector('.title-contact');
+const numberContact = document.querySelector('.phonenumber-contact');
+const btnAddContact = document.querySelector('.btn-phonenumber');
+const listContact = document.querySelector('.list-contacts');
+const selectTypePhonenumber = document.querySelector('.select-type-phonenumber');
 
-//Event listener
-btnPhone.addEventListener('click', addItem);
-phoneList.addEventListener('click', deleteItem);
+//*Event listener
+btnAddContact.addEventListener('click', addItem);
+listContact.addEventListener('click', deleteItem);
 
-
-//Function
+//*Function
 function addItem(event){
   event.preventDefault();
-  const divPhone = document.createElement('div');
-  divPhone.classList.add('contacts');
+  const boxContact = document.createElement('div');
+  boxContact.classList.add('contacts');
 
   const contact = document.createElement('li');
   contact.classList.add('contact-list');
-  const titleContact = document.createElement('span');
-  const numberContact = document.createElement('span');
-  const typeContact = document.createElement('span');
+  const titleForContact = document.createElement('span');
+  const numberForContact = document.createElement('span');
+  const typePhoneContact = document.createElement('span');
 
-  titleContact.innerText = titlePhone.value;
-  numberContact.innerText = numberPhone.value;
-  typeContact.innerText = selectType.options[selectType.selectedIndex].innerText;
-  contact.appendChild(titleContact);
-  contact.appendChild(numberContact);
-  contact.appendChild(typeContact);
-  divPhone.appendChild(contact);
+  titleForContact.innerText = titleContact.value;
+  numberForContact.innerText = numberContact.value;
+  typePhoneContact.innerText = selectTypePhonenumber.options[selectTypePhonenumber.selectedIndex].innerText;
+  contact.appendChild(titleForContact);
+  contact.appendChild(numberForContact);
+  contact.appendChild(typePhoneContact);
+  boxContact.appendChild(contact);
 
   // todo: add trash buttton
   const trashButton = document.createElement('button');
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
   trashButton.classList.add('trash-button');
-  divPhone.appendChild(trashButton);
+  boxContact.appendChild(trashButton);
 
   //todo: add div to ul
-  phoneList.appendChild(divPhone);
-
-  titlePhone.value = '';
-  numberPhone.value = '';
+  listContact.appendChild(boxContact);
+  //todo: empty inputs
+  titleContact.value = '';
+  numberContact.value = '';
 }
 
 function deleteItem(event){
