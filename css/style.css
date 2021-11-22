@@ -1,4 +1,4 @@
-/* fonts => start */
+/** fonts => start */
 @font-face {
   font-family: "mikhak";
   src: url(../fonts/Mikhak-Bold.ttf);
@@ -14,7 +14,7 @@
   font-display: auto;
 }
 /* fonts => end */
-/* Normalize style => start */
+/** Normalize style => start */
 * {
   padding: 0;
   margin: 0;
@@ -22,7 +22,7 @@
   font-family: "mikhak";
 }
 html {
-  /* 62.5% = 10px = 1rem */
+  /*! 62.5% = 10px = 1rem */
   font-size: 62.5%;
   direction: rtl;
 }
@@ -54,7 +54,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 /* Normalize style => end */
-/* main contetnt => start */
+/** main contetnt => start */
 body {
   min-width: 37.5rem;
   width: 100vw;
@@ -76,7 +76,6 @@ body {
   color: #eee;
 }
 /* header => end */
-
 .main {
   margin: 2.5rem 0;
 }
@@ -109,6 +108,7 @@ body {
   background-color: orange;
   color: #333;
 }
+/* type phone number contact */
 .box-type-phonenumber {
   margin: 1rem;
   position: relative;
@@ -130,7 +130,7 @@ body {
   width: 15rem;
   font-size: 1.5rem;
 }
-
+/*  list contacts */
 .list-phonenumber {
   display: flex;
   justify-content: center;
@@ -165,6 +165,7 @@ body {
 .contact-list span {
   margin: 0 1rem;
 }
+/* delete buutton */
 .trash-button {
   background-color: blue;
   padding: 1rem 1.5rem;
@@ -175,6 +176,7 @@ body {
   border: 1px solid transparent;
   margin: 1px;
 }
+/* effect for delete contact */
 .effect-delete {
   opacity: 0;
   transition: all 1s ease;

@@ -14,35 +14,44 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- header => start -->
     <header class="header">
       <h1>دفترچه تلفن</h1>
     </header>
+    <!--  header => end -->
+    <!--  main content => start -->
     <main class="main">
       <form class="form">
+        <!-- title contact -->
         <input
           type="text"
           class="input title-contact"
           placeholder="نام و نام خانوادگی"
         />
+        <!-- phone number contact -->
         <input
           type="number"
           class="input phonenumber-contact"
           placeholder="شماره تلفن"
         />
+        <!-- type phone number cintact -->
         <div class="box-type-phonenumber">
           <select class="input select-type-phonenumber">
             <option value="0">شماره ثابت</option>
             <option value="1">شماره همراه</option>
           </select>
         </div>
+        <!--  button for add contact -->
         <button type="submit" class="btn-phonenumber">
           <i class="fas fa-plus"></i>
         </button>
       </form>
       <section class="list-phonenumber">
+        <!-- list contacts -->
         <ul class="list-contacts"></ul>
       </section>
     </main>
+    <!--  main content => end -->
 
     <script src="javascript/index.js"></script>
   </body>
