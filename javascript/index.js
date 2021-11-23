@@ -64,6 +64,8 @@ function deleteItem(event){
     setTimeout(()=>{
       parentItem.remove();
     },1000);
+    // todo: remove item in local storage
+    removeLocalStorage(parentItem);
   }
 }
 // todo: filter contact with type phone number
@@ -103,5 +105,20 @@ function saveLocalStorage(contact){
     contacts = JSON.parse(localStorage.getItem('contacts'));
   }
   contacts.push(contact);
+  localStorage.setItem('contacts', JSON.stringify(contacts));
+}
+// todo:  remove data in local storage
+function removeLocalStorage (contact){
+  let contacts;
+  if(localStorage.getItem('contacts') === null){
+    contacts = [];
+  } else {
+    contacts = JSON.parse(localStorage.getItem('contacts'));
+  }
+  const result = contact.children[0].innerHTML.split('</span');
+  const number = result[1].match(/\d/g).join("");
+  // todo: find index for remove in local storage
+  const index = contacts.findIndex(item => item.number === number);
+  contacts.splice(index,1);
   localStorage.setItem('contacts', JSON.stringify(contacts));
 }
