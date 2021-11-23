@@ -113,16 +113,17 @@ body {
   margin: 1rem;
   position: relative;
 }
-.box-type-phonenumber::after {
+.box-type-phonenumber::after,
+.filter:after {
   content: "\25BC";
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   background-color: blue;
   color: #fff;
   font-size: 1.5rem;
-  padding: 0.7rem;
-  height: 2.4rem;
+  padding: 1rem 0.7rem 0.4rem 0.7rem;
   border-radius: 5px 0 0 5px;
   pointer-events: none;
 }
@@ -154,15 +155,18 @@ body {
   font-size: 1.5rem;
   border-radius: 3px;
 }
+.contacts span {
+}
 /* contacts box => end*/
 /* contact => start*/
 .contact-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 0 0 3rem;
 }
 .contact-list span {
+  flex: 1;
   margin: 0 1rem;
 }
 /* delete buutton */
@@ -176,6 +180,9 @@ body {
   border: 1px solid transparent;
   margin: 1px;
 }
+.fa-trash {
+  pointer-events: none;
+}
 /* effect for delete contact */
 .effect-delete {
   opacity: 0;
@@ -183,4 +190,17 @@ body {
   transform: translateX(-50%);
 }
 /* contact => end*/
+/* filter contacts  => start*/
+.filter {
+  min-width: 30%;
+  position: relative;
+  margin: 1.5rem 0;
+  display: none;
+}
+.contacts-filter {
+  width: 100%;
+  font-size: 1.5rem;
+}
+/* filter contacts  => end*/
+
 /* main contetnt => end */

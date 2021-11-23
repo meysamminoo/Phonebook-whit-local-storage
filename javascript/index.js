@@ -4,10 +4,13 @@ const numberContact = document.querySelector('.phonenumber-contact');
 const btnAddContact = document.querySelector('.btn-phonenumber');
 const listContact = document.querySelector('.list-contacts');
 const selectTypePhonenumber = document.querySelector('.select-type-phonenumber');
+const filter = document.querySelector('.filter');
+const filterContact = document.querySelector('.contacts-filter');
 
 //* Event listener
 btnAddContact.addEventListener('click', addItem);
 listContact.addEventListener('click', deleteItem);
+filterContact.addEventListener('click', filterContacts)
 
 //* Function
 function addItem(event){
@@ -16,6 +19,7 @@ function addItem(event){
   // todo: build box  for contact
   const boxContact = document.createElement('div');
   boxContact.classList.add('contacts');
+  boxContact.classList.add(selectTypePhonenumber.options[selectTypePhonenumber.selectedIndex].value);
   const contact = document.createElement('li');
   contact.classList.add('contact-list');
   const titleForContact = document.createElement('span');
@@ -42,6 +46,7 @@ function addItem(event){
   //todo: empty inputs
   titleContact.value = '';
   numberContact.value = '';
+  filter.style.display = 'block';
 }
 // todo: remove items method
 function deleteItem(event){
@@ -53,4 +58,33 @@ function deleteItem(event){
       parentItem.remove();
     },1000);
   }
+}
+// todo: filter contact with type phone number
+function filterContacts(event){
+  const contactAll = listContact.childNodes;
+  contactAll.forEach(function(contact){
+    switch (event.target.value) {
+      case "2":
+        contact.style.display = 'flex';
+        break;
+      case "1":
+        if (contact.classList.contains("1")){
+          contact.style.display = 'flex';
+        } else {
+          contact.style.display = 'none';
+        }
+        break;
+      case "0":
+        if (contact.classList.contains("0")){
+          contact.style.display = 'flex';
+        } else {
+          contact.style.display = 'none';
+        }
+        break;
+    
+      default:
+        break;
+    }
+  })
+
 }
