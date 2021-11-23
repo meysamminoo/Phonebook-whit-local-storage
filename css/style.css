@@ -1,3 +1,10 @@
+/** Variable */
+:root {
+  --main_color: #01579b;
+  --white: #eee;
+  --secondary-color: #fdd835;
+  --border-color: #777;
+}
 /** fonts => start */
 @font-face {
   font-family: "mikhak";
@@ -67,13 +74,13 @@ body {
 /* header => start */
 .header {
   width: 100%;
-  background-color: blue;
+  background-color: var(--main_color);
   text-align: center;
 }
 .header h1 {
   font-size: 3rem;
   margin: 3rem 0;
-  color: #eee;
+  color: var(--white);
 }
 /* header => end */
 .main {
@@ -89,14 +96,14 @@ body {
   padding: 1rem;
   font-size: 2rem;
   margin-left: 0.5rem;
-  border: 1px solid #777;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
 }
 .btn-phonenumber {
   width: 5.5rem;
   height: 5.5rem;
-  background-color: blue;
-  color: #fff;
+  background-color: var(--main_color);
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +112,7 @@ body {
   transition: all 0.5s ease;
 }
 .btn-phonenumber:hover {
-  background-color: orange;
+  background-color: var(--secondary-color);
   color: #333;
 }
 /* type phone number contact */
@@ -120,8 +127,8 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: blue;
-  color: #fff;
+  background-color: var(--main_color);
+  color: var(--white);
   font-size: 1.5rem;
   padding: 1rem 0.7rem 0.4rem 0.7rem;
   border-radius: 5px 0 0 5px;
@@ -150,7 +157,7 @@ body {
   align-items: center;
   background-color: transparent;
   color: #000;
-  border: 1px solid #777;
+  border: 1px solid var(--border-color);
   margin: 1rem 0.5rem;
   font-size: 1.5rem;
   border-radius: 3px;
@@ -171,14 +178,19 @@ body {
 }
 /* delete buutton */
 .trash-button {
-  background-color: blue;
+  background-color: var(--main_color);
   padding: 1rem 1.5rem;
   border-radius: 3px 0 0 3px;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   border: 1px solid transparent;
   margin: 1px;
+  transition: all 0.5s ease;
+}
+.trash-button:hover {
+  background-color: var(--secondary-color);
+  color: #000;
 }
 .fa-trash {
   pointer-events: none;
@@ -203,7 +215,6 @@ body {
 }
 /* filter contacts  => end*/
 /* main contetnt => end */
-
 /** responsive design */
 @media only screen and (max-width: 800px) {
   .form {
