@@ -56,7 +56,7 @@ input[type="number"] {
 /* Normalize style => end */
 /** main contetnt => start */
 body {
-  min-width: 37.5rem;
+  min-width: 53rem;
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -202,5 +202,25 @@ body {
   font-size: 1.5rem;
 }
 /* filter contacts  => end*/
-
 /* main contetnt => end */
+
+/** responsive design */
+@media only screen and (max-width: 800px) {
+  .form {
+    /* flex-direction: column; */
+  }
+  .input {
+    font-size: 1.2rem;
+  }
+  .box-type-phonenumber {
+    margin: 0.5rem;
+  }
+  .select-type-phonenumber {
+    width: 10rem;
+  }
+  .btn-phonenumber {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.2rem;
+  }
+}

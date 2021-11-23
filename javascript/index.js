@@ -10,7 +10,8 @@ const filterContact = document.querySelector('.contacts-filter');
 //* Event listener
 btnAddContact.addEventListener('click', addItem);
 listContact.addEventListener('click', deleteItem);
-filterContact.addEventListener('click', filterContacts)
+filterContact.addEventListener('click', filterContacts);
+document.addEventListener('DOMContentLoaded', getContact);
 
 //* Function
 function addItem(event){
@@ -117,8 +118,54 @@ function removeLocalStorage (contact){
   }
   const result = contact.children[0].innerHTML.split('</span');
   const number = result[1].match(/\d/g).join("");
+
   // todo: find index for remove in local storage
   const index = contacts.findIndex(item => item.number === number);
+
   contacts.splice(index,1);
   localStorage.setItem('contacts', JSON.stringify(contacts));
+}
+
+// todo: get data as local storage
+function getContact(){
+  let contacts;
+  if(localStorage.getItem('contacts') === null){
+    contacts = [];
+  } else {
+    contacts = JSON.parse(localStorage.getItem('contacts'));
+  }
+  contacts.forEach(function(item){
+  // todo: build box  for contact
+  const boxContact = document.createElement('div');
+  boxContact.classList.add('contacts');
+  boxContact.classList.add(selectTypePhonenumber.options[selectTypePhonenumber.selectedIndex].value);
+  const contact = document.createElement('li');
+  contact.classList.add('contact-list');
+  const titleForContact = document.createElement('span');
+  const numberForContact = document.createElement('span');
+  const typePhoneContact = document.createElement('span');
+
+  titleForContact.innerText = item.name;
+  numberForContact.innerText = item.phoneNumber;
+  typePhoneContact.innerText = item.type;
+
+  contact.appendChild(titleForContact);
+  contact.appendChild(numberForContact);
+  contact.appendChild(typePhoneContact);
+  boxContact.appendChild(contact);
+
+  // todo: add trash buttton
+  const trashButton = document.createElement('button');
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add('trash-button');
+  boxContact.appendChild(trashButton);
+
+  //todo: add div to ul
+  listContact.appendChild(boxContact);
+
+  //todo: empty inputs
+  titleContact.value = '';
+  numberContact.value = '';
+  filter.style.display = 'block';
+  })
 }
