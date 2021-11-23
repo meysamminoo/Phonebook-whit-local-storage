@@ -43,6 +43,13 @@ function addItem(event){
 
   //todo: add div to ul
   listContact.appendChild(boxContact);
+
+  // todo: save to local storege
+  saveLocalStorage({
+    name: titleContact.value,
+    phoneNumber: numberContact.value,
+    type: selectTypePhonenumber.options[selectTypePhonenumber.selectedIndex].innerText
+  });
   //todo: empty inputs
   titleContact.value = '';
   numberContact.value = '';
@@ -86,5 +93,15 @@ function filterContacts(event){
         break;
     }
   })
-
+}
+// todo: save data to local storage
+function saveLocalStorage(contact){
+  let contacts;
+  if(localStorage.getItem('contacts') === null){
+    contacts = [];
+  } else {
+    contacts = JSON.parse(localStorage.getItem('contacts'));
+  }
+  contacts.push(contact);
+  localStorage.setItem('contacts', JSON.stringify(contacts));
 }
