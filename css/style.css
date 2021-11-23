@@ -4,6 +4,7 @@
   --white: #eee;
   --secondary-color: #fdd835;
   --border-color: #777;
+  --black: #000;
 }
 /** fonts => start */
 @font-face {
@@ -156,7 +157,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  color: #000;
+  color: var(--black);
   border: 1px solid var(--border-color);
   margin: 1rem 0.5rem;
   font-size: 1.5rem;
@@ -190,7 +191,7 @@ body {
 }
 .trash-button:hover {
   background-color: var(--secondary-color);
-  color: #000;
+  color: var(--black);
 }
 .fa-trash {
   pointer-events: none;
